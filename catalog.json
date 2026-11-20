@@ -1,0 +1,530 @@
+{
+  "schema": 2,
+  "components": [
+    {
+      "id": "cluster-render",
+      "kind": "tool",
+      "title": "Cluster renderer",
+      "description": "Draws every app's layers on the instrument cluster and the HUD, sharing the display slots and one upload budget",
+      "version": "0.6.9",
+      "artifact": {
+        "name": "cluster-render@0.6.9.tgz",
+        "size": 10442325,
+        "sha256": "68e537c06ad0c6a8cc86e0cb21d364f6f1705715538e2dcc75dcf8bc54eaff7d",
+        "url": "tools/cluster-render@0.6.9.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ]
+    },
+    {
+      "id": "idrive7-renderd",
+      "kind": "tool",
+      "title": "GPU renderer",
+      "description": "The apps' own GPU renderer (mgu-render): draws them at 60 fps, beside the MGU Store's Renderer; installed with the apps (iDrive 7 and iDrive 8)",
+      "version": "2.1.19",
+      "artifact": {
+        "name": "idrive7-renderd@2.1.19.tgz",
+        "size": 93870,
+        "sha256": "b55d0079269cd893053917c03ce5fc3d6befb48da619c3d3399261347b42e929",
+        "url": "tools/idrive7-renderd@2.1.19.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ]
+    },
+    {
+      "id": "mgu-inputgate",
+      "kind": "tool",
+      "title": "Controller gate",
+      "description": "Lets the apps have the iDrive controller (tabs, page buttons, settings, Doom); loads into the HMI at the next start (iDrive 7 and iDrive 8)",
+      "version": "1.2.1",
+      "artifact": {
+        "name": "mgu-inputgate@1.2.1.tgz",
+        "size": 8238,
+        "sha256": "1756e06887a8a6defeaf14e6e682444064192cbf195ab6f004736cf7f1a211bb",
+        "url": "tools/mgu-inputgate@1.2.1.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ]
+    },
+    {
+      "id": "ambient_config",
+      "kind": "app",
+      "title": "Ambient config",
+      "description": "Any colour on the ambient light, animations, and a look for each driving mode",
+      "version": "2.7.7",
+      "artifact": {
+        "name": "ambient_config@2.7.7.tgz",
+        "size": 1168611,
+        "sha256": "e8a593937324c637b521601c61f2c570a752908dc6e2c74a725c6425b992aa22",
+        "url": "apps/ambient_config@2.7.7.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0"
+      },
+      "icon": "icons/ambient_config.png",
+      "iconSha256": "046f958dadf3ce68ab125af79222db291c6f3a419f1de1805df2922941bb0d16"
+    },
+    {
+      "id": "brake_test",
+      "kind": "app",
+      "title": "Brake Test",
+      "description": "100-0 and 200-0 braking distance, peak decel and brake-fade tracking",
+      "version": "1.5.21",
+      "artifact": {
+        "name": "brake_test@1.5.21.tgz",
+        "size": 1141130,
+        "sha256": "999e57a57abd0cbc288f67862d7b8832e4b6c1bb8fb63a5d034a27f180f8433d",
+        "url": "apps/brake_test@1.5.21.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0"
+      },
+      "icon": "icons/brake_test.png",
+      "iconSha256": "c0d9bd3d5ec1b16c99ba947e5568a1867d50720aff80e2eefafab21a481b7e7f"
+    },
+    {
+      "id": "car_vitals",
+      "kind": "app",
+      "title": "M Vitals",
+      "description": "Live engine, thermal, intake / fuel / ignition, tyre and chassis gauges",
+      "version": "2.27.8",
+      "artifact": {
+        "name": "car_vitals@2.27.8.tgz",
+        "size": 1172238,
+        "sha256": "2e6c7907808ac97a80515ae9e47fbb8dbdf5396bbea165e9d42577091a1d38b2",
+        "url": "apps/car_vitals@2.27.8.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0"
+      },
+      "icon": "icons/car_vitals.png",
+      "iconSha256": "f4ed2c2cf8f3c7dce5929aadeade8989449e8e5389568e05c0c4f42f1daef37d"
+    },
+    {
+      "id": "cluster_centre",
+      "kind": "app",
+      "title": "Cluster Centre",
+      "description": "Pages of engine, gearbox and eDrive data, warm-up, turbo cool-down, a shift light and a 0-60 timer in the centre of the factory cluster, drawn by the cluster itself",
+      "version": "0.9.0",
+      "artifact": {
+        "name": "cluster_centre@0.9.0.tgz",
+        "size": 1470051,
+        "sha256": "8e4badca796488a335fbd8aae644accb270ae560010b7cedaeaceb5259fbeef1",
+        "url": "apps/cluster_centre@0.9.0.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.4.2"
+      },
+      "icon": "icons/cluster_centre.png",
+      "iconSha256": "bafab2f18e69025773eb49aaa777e1c6972301ac7b0cf5e518fe794239e1b81d"
+    },
+    {
+      "id": "cluster_info",
+      "kind": "app",
+      "title": "Cluster Info",
+      "description": "A small panel of up to three live values (battery power from eDrive Live, battery charge, battery, oil and coolant temperature) over the Waze map in the cluster or on the HUD, and turn signal arrows on the HUD",
+      "version": "1.6.8",
+      "artifact": {
+        "name": "cluster_info@1.6.8.tgz",
+        "size": 1002680,
+        "sha256": "f8c2d4420f89e46796391cf11fa2e409b2c6af777e8550fad9967455388dc57a",
+        "url": "apps/cluster_info@1.6.8.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "icon": "icons/cluster_info.png",
+      "iconSha256": "bafab2f18e69025773eb49aaa777e1c6972301ac7b0cf5e518fe794239e1b81d"
+    },
+    {
+      "id": "cluster_layouts",
+      "kind": "app",
+      "title": "Cluster Layouts",
+      "description": "Your own layout on the whole instrument cluster (round dials, gear, temperatures), drawn by the cluster itself",
+      "version": "0.28.1",
+      "artifact": {
+        "name": "cluster_layouts@0.28.1.tgz",
+        "size": 1384788,
+        "sha256": "0e3aef797146a53c8d9249ba0e852749525008271956372989f9a5d7f8c6b395",
+        "url": "apps/cluster_layouts@0.28.1.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.4.2"
+      },
+      "icon": "icons/cluster_layouts.png",
+      "iconSha256": "bafab2f18e69025773eb49aaa777e1c6972301ac7b0cf5e518fe794239e1b81d"
+    },
+    {
+      "id": "doom",
+      "kind": "app",
+      "title": "Doom",
+      "description": "Doom (Freedoom: Phase 1) on the iDrive. Main menu with all settings; the game drawn in full resolution across the whole screen, on the controller; BACK returns to the menu and saves",
+      "version": "1.7.22",
+      "artifact": {
+        "name": "doom@1.7.22.tgz",
+        "size": 12099904,
+        "sha256": "e5cfe7f7dd3c4bfe222a7c6879c3ff65ef7ad8a809947ed1ab5f699f337f77b5",
+        "url": "apps/doom@1.7.22.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0"
+      },
+      "icon": "icons/doom.png",
+      "iconSha256": "4e1059afa6ca3023f873d2d2c7c44843d959b9bd16d4c905da2a3dd05f2a37f2"
+    },
+    {
+      "id": "draggy",
+      "kind": "app",
+      "title": "Drag Timer",
+      "description": "0-100, 100-200 and 1/4 mile timer with best times",
+      "version": "2.6.0",
+      "artifact": {
+        "name": "draggy@2.6.0.tgz",
+        "size": 1142219,
+        "sha256": "7ec1da2894c2b759c2fdd1a0e1201ebab64e989ea6e6bc5cf719be3c1b5e15a7",
+        "url": "apps/draggy@2.6.0.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0"
+      },
+      "icon": "icons/draggy.png",
+      "iconSha256": "4d57c4caa4dff86649f7395796c8fbd05eeac035efba6df067f95dd0cf6f160b"
+    },
+    {
+      "id": "dtc_scanner",
+      "kind": "app",
+      "title": "Fault Scanner",
+      "description": "Read and clear fault memory of every control unit, plus active Check Control messages",
+      "version": "2.9.8",
+      "artifact": {
+        "name": "dtc_scanner@2.9.8.tgz",
+        "size": 6259621,
+        "sha256": "cdb86de90d63580eab2ef902c20685e57cbba9cdc2f62865bafeb2153bba8d69",
+        "url": "apps/dtc_scanner@2.9.8.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0"
+      },
+      "icon": "icons/dtc_scanner.png",
+      "iconSha256": "e32af9aae088f38d40d312aaff61f7e51b14835924b01328039b461d84192171"
+    },
+    {
+      "id": "dyno",
+      "kind": "app",
+      "title": "Virtual Dyno",
+      "description": "Power and torque curves from a full-throttle pull, saved and compared",
+      "version": "1.6.3",
+      "artifact": {
+        "name": "dyno@1.6.3.tgz",
+        "size": 1136693,
+        "sha256": "3198ff61f6cad388c4c691938bcb2af144d6ffe2ea1a685ca5b184f2a82ded41",
+        "url": "apps/dyno@1.6.3.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.15"
+      },
+      "icon": "icons/dyno.png",
+      "iconSha256": "18ba9e4356b444f2362ce1dc137cec038cfcfeb17f099f203acc4106401f74eb"
+    },
+    {
+      "id": "edrive",
+      "kind": "app",
+      "title": "eDrive",
+      "description": "Real electric range (plug-in hybrids and fully electric cars such as the iX3), live battery power, cells and climate power, HV battery health (SOH) and energy, last charge, charge log, the 12 V battery (charge, voltage, what it does, regen, history) and a home-screen widget; on a 48 V mild hybrid its 48 V battery and DC/DC converter",
+      "version": "2.11.0",
+      "artifact": {
+        "name": "edrive@2.11.0.tgz",
+        "size": 1231299,
+        "sha256": "4cc70dd35a49ad5a2ddc52e58eb9749db3471535f035450c20794dd5d33703a5",
+        "url": "apps/edrive@2.11.0.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.15"
+      },
+      "icon": "icons/edrive.png",
+      "iconSha256": "5869ea41c3c995e8f085e2761277db3e5f5040b6042ad50ad185d9b3b52a824a"
+    },
+    {
+      "id": "edrive2",
+      "kind": "app",
+      "title": "eDrive Live",
+      "description": "Live HV battery power (kW), cell temperatures and voltages, power limits, and climate / HVAC power use - set up for the X5 xDrive45e (G05 PHEV)",
+      "version": "1.10.1",
+      "artifact": {
+        "name": "edrive2@1.10.1.tgz",
+        "size": 1011676,
+        "sha256": "bac03e7d2dfd664293c4744c144c777177fecf8a884843a597a5dc21e61df39f",
+        "url": "apps/edrive2@1.10.1.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "icon": "icons/edrive2.png",
+      "iconSha256": "61c7070e56226fddec285d9e4ce697702b20232065822ff154685224a653f33b"
+    },
+    {
+      "id": "gforce",
+      "kind": "app",
+      "title": "G-Force",
+      "description": "Friction circle with grip envelope, peak g per direction and session records",
+      "version": "1.6.22",
+      "artifact": {
+        "name": "gforce@1.6.22.tgz",
+        "size": 1139705,
+        "sha256": "9207f2ad4a17673d8209ec64cf4992217fac4a24e5a38bb5013428fe29fc414c",
+        "url": "apps/gforce@1.6.22.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.15"
+      },
+      "icon": "icons/gforce.png",
+      "iconSha256": "89e9e46537580ac2ae0048720e39ac9a175c1c44f286c4f1d7fc1e1828e79318"
+    },
+    {
+      "id": "light_show",
+      "kind": "app",
+      "title": "Light Show",
+      "description": "Flash the exterior lamps in patterns through the body controller's lamp test functions: emergency patterns (wig-wag and more, on lamps that are normally off while driving) and light shows. A lamp check finds which lamps the car lets the app switch.",
+      "version": "0.5.2",
+      "artifact": {
+        "name": "light_show@0.5.2.tgz",
+        "size": 1002378,
+        "sha256": "5f802c31a487283375022fadfe75bc2185982e3eb35a2a189e71ed2d8ed614d6",
+        "url": "apps/light_show@0.5.2.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "icon": "icons/light_show.png",
+      "iconSha256": "a8d450bdc6d61d5d45f841399839a5962b64aee76c40a735b4d4d4a94e0807f9"
+    },
+    {
+      "id": "live_adjustments",
+      "kind": "app",
+      "title": "Engine Config",
+      "description": "Engine Config for BMW MGU ID7. Exhaust Flap: OEM, OPEN and CLOSE over the car's own diagnostic link, or following the driving mode (Sport open, Eco Pro closed); held against the DME's timeout, Close handed back above a set engine speed. With BM3 or MHD picked in Settings: engine map switching, burbles, ASD and Max Cooling. Experimental: xDrive off until the ignition cycle (DSC LMV_FUNKTION), behind its own setting",
+      "version": "0.9.8",
+      "artifact": {
+        "name": "live_adjustments@0.9.8.tgz",
+        "size": 1317955,
+        "sha256": "512fd76159c7215ca34987920cd307a0361092d193f0a05371b8d7a80302e5fe",
+        "url": "apps/live_adjustments@0.9.8.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0"
+      },
+      "icon": "icons/live_adjustments.png",
+      "iconSha256": "a274ebbeb1cda6ed3e5af20cccaa6c4877ebd2e515880d20f81fa874606400c5"
+    },
+    {
+      "id": "live_data",
+      "kind": "app",
+      "title": "Live Data",
+      "description": "Read-only live values from the car and its control units, a trip computer with fuel cost, and gauge screens of your own, one of them as the home-screen widget",
+      "version": "1.0.18",
+      "artifact": {
+        "name": "live_data@1.0.18.tgz",
+        "size": 1217043,
+        "sha256": "ee98ec25b61e7b8d2e0e9a7d82b0222e260ccdc30a1968d7972d323d7c773a87",
+        "url": "apps/live_data@1.0.18.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0"
+      },
+      "icon": "icons/live_data.png",
+      "iconSha256": "27a70f2f4fd94b447938d83ee479ec8060c0d4d5d9ac65e978f14fe273b17c7d"
+    },
+    {
+      "id": "redline",
+      "kind": "app",
+      "title": "Redline",
+      "description": "Full-screen rev tach with shift lights, gear, shift scoring and cold-engine rev guard; HUD by @biscotit",
+      "version": "2.0.45",
+      "artifact": {
+        "name": "redline@2.0.45.tgz",
+        "size": 1349378,
+        "sha256": "0615b467860285beafcf7538a24aab628df1ed1ccd9e89e76d680c99b3321b48",
+        "url": "apps/redline@2.0.45.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.15"
+      },
+      "icon": "icons/redline.png",
+      "iconSha256": "9c2a029af517d3542604f40a56189c0ecb59d580ba9968ee63fddde35c02cf1d"
+    },
+    {
+      "id": "service",
+      "kind": "app",
+      "title": "Service",
+      "description": "Service requirements from the instrument cluster: oil, brakes, brake fluid, vehicle check, inspection - distance, date, details; brake fluid and vehicle check reset",
+      "version": "1.6.3",
+      "artifact": {
+        "name": "service@1.6.3.tgz",
+        "size": 1137966,
+        "sha256": "21f6d63ecc2f7d3a68e985630beb608e0dc508ea833b4fc72141424f82017076",
+        "url": "apps/service@1.6.3.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.15"
+      },
+      "icon": "icons/service.png",
+      "iconSha256": "606928ba45bd2f212eb81d87a5ae8ff4fc9d0129c6973e0d70a51ef861179ee9"
+    },
+    {
+      "id": "warmup",
+      "kind": "app",
+      "title": "Warm-Up",
+      "description": "Oil and coolant warm-up calculator (time to ready), safe rev limit, turbo cool-down and a cold start counter",
+      "version": "1.9.0",
+      "artifact": {
+        "name": "warmup@1.9.0.tgz",
+        "size": 1134941,
+        "sha256": "14ca6f67d11150cbf1c4b17b6a5d47015f46e24bd01efabf1ee095ad0f760c12",
+        "url": "apps/warmup@1.9.0.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.15"
+      },
+      "icon": "icons/warmup.png",
+      "iconSha256": "712aa342b103c39b3be8879ba071d0d0294620bd3e5abbc8e5bbc7ea67ee15e5"
+    },
+    {
+      "id": "zf8hp",
+      "kind": "app",
+      "title": "Transmission Config",
+      "description": "Transmission Config, experimental ZF 8HP monitor: live data, clutch fill adaptations, shift maps and temperature history",
+      "version": "1.5.8",
+      "artifact": {
+        "name": "zf8hp@1.5.8.tgz",
+        "size": 1130713,
+        "sha256": "d2ca16d38952828f1a32390b30be042e5f957d1653b84394accceae953352500",
+        "url": "apps/zf8hp@1.5.8.tgz"
+      },
+      "uninstallable": true,
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0"
+      },
+      "icon": "icons/zf8hp.png",
+      "iconSha256": "5bdfb5f5579ee5f14be0120e06e9c8feafd0db6a3940421bf7ab44d0005aa1b0"
+    }
+  ]
+}
