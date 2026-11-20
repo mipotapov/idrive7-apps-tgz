@@ -1,0 +1,24 @@
+# Notices for tools
+
+## idrive7-renderd (mgu-render)
+
+Copyright (C) 2026 Robert Nisipeanu and IterioDev.
+
+The renderer is GPL-3.0-or-later: see `GPL-3.0.txt`.
+Parts taken from the earlier mgu-renderd renderer remain MIT: see
+`MIT-mgu-renderd.txt`.
+Source: <https://github.com/cauliflowermossgrape/idrive7-apps/tree/main/kit/renderd>
+
+## mgu-inputgate
+
+The controller gate from `idrive7-apps/kit/renderd/inputgate`, MIT: see
+`MIT-idrive7-apps.txt`. Its vsomeip headers are MPL-2.0: see `MPL-2.0.txt`.
+Source: <https://github.com/cauliflowermossgrape/idrive7-apps/tree/main/kit/renderd/inputgate>
+
+## cluster-render
+
+Copyright (C) 2026 Robert Nisipeanu.
+
+The service is GPL-3.0: see `GPL-3.0.txt`.
+Its Node client `cluster_render_client.js` is MPL-2.0: see `MPL-2.0.txt`.
+Source: <https://github.com/robertnisipeanu/idrive-apps/tree/main/native/cluster-render>
